@@ -15,7 +15,8 @@ html, body{
 #root {
   background: url("Logo-2.1.png");
   background: rgb(84,58,13);
-  background: radial-gradient(circle, rgba(84,58,13,1) 30%, rgba(17,255,88,1) 100%);
+  background: rgb(253,187,45);
+  background: url("Logo-2.1.png"), radial-gradient(circle, rgba(253,187,45,1) 25%, rgba(34,193,195,1) 100%);
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
