@@ -113,7 +113,7 @@ function Contact() {
       <h1>Contact</h1>
       <h2>Phone: 509-820-0538</h2>
       <h2>
-        <a href="mailto: forneyfamilyfotography@gmail.com">Email</a>
+        Email: <a href="mailto: forneyfamilyfotography@gmail.com">forneyfamilyfotography@gmail.com</a>
       </h2>
     </Container>
   );
