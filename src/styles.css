@@ -1,17 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+html, body{
+  font-family: 'Chewy', cursive;
+}
+
 .nav {
   display: flex;
   gap: 1em;
   justify-content: center;
+  /*
   background-color: rgb(16, 255, 136);
+  */
   padding: 1em;
 }
 
-body {
-  color: rgba(82, 58, 16, 0.85);
-  background-color: bisque;
+#root {
+  color: rgb(0,0,0,0.8);
+  background: url("Logo-2.1.png"), linear-gradient(rgb(85, 228, 85), rgb(129, 78, 30));
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  min-height: 800px;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .nav > li > a {
-  color: rgba(82, 58, 16, 0.85);
+  color: rgb(0,0,0,0.6);
   font-weight: bold;
 }
