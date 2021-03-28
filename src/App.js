@@ -1,58 +1,104 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
+import { Container, Form, Button } from "react-bootstrap";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul className="nav">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/staff">The Staff</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/staff">
+            <MeetStaff />
+          </Route>
+          <Route path="/services">
+            <Services />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+function Home() {
+  return (
+    <Container>
+      <h2>Family Forney Fotography</h2>
+      <img src={`${process.env.PUBLIC_URL}/watermark.jpeg`} alt="family"></img>
+    </Container>
+  );
+}
+
+function About() {
+  return (
+    <Container>
+      <h2>About</h2>
+    </Container>
+  );
+}
+
+function Contact() {
+  return (
+    <Container>
+      <h1>Contact</h1>
+      <h2>Phone: 509-820-0538</h2>
+      <h2>
+        <a href="mailto: forneyfamilyfotography@gmail.com">Email</a>
+      </h2>
+    </Container>
+  );
+}
+
+function Services() {
+  return (
+    <Container>
+      <h2>Services</h2>
+    </Container>
+  );
+}
+
+function MeetStaff() {
+  return (
+    <Container>
+      <h2>Meet The Staff</h2>
+    </Container>
+  );
+}
+
+function Reviews() {
+  return (
+    <Form>
+      <Button>Submit</Button>
+    </Form>
+  );
+}
