@@ -2,21 +2,20 @@
 
 html, body{
   font-family: 'Chewy', cursive;
+  color: black;
 }
 
 .nav {
   display: flex;
   gap: 1em;
   justify-content: center;
-  /*
-  background-color: rgb(16, 255, 136);
-  */
   padding: 1em;
 }
 
 #root {
-  color: rgb(0,0,0,0.8);
-  background: url("Logo-2.1.png"), linear-gradient(rgb(85, 228, 85), rgb(129, 78, 30));
+  background: url("Logo-2.1.png");
+  background: rgb(84,58,13);
+  background: radial-gradient(circle, rgba(84,58,13,1) 30%, rgba(17,255,88,1) 100%);
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -31,6 +30,6 @@ html, body{
 }
 
 .nav > li > a {
-  color: rgb(0,0,0,0.6);
+  color: black;
   font-weight: bold;
 }
